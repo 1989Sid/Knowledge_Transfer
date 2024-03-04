@@ -1,0 +1,21 @@
+Configuring a self-hosted agent involves several steps. Here's a basic guide:
+
+1. **Prerequisites**: Ensure you have a machine or VM where you want to host the agent. It should have the necessary system requirements and network access to communicate with your Azure DevOps organization or Azure DevOps Server.
+
+2. **Download Agent Package**: Go to your Azure DevOps organization or Azure DevOps Server, navigate to the "Agent pools" or "Agent queues" section, and download the agent package appropriate for your operating system (Windows, Linux, macOS).
+
+3. **Extract Agent Package**: Extract the downloaded agent package to a directory on your machine.
+
+4. **Configure Agent**: Navigate to the directory where you extracted the agent package and run the configuration script. This script typically has a name like `config.cmd` (Windows) or `config.sh` (Linux/macOS).
+
+5. **Provide Configuration Details**: The configuration script will prompt you to provide various details such as the URL of your Azure DevOps organization or Azure DevOps Server, the PAT (Personal Access Token) for authentication, agent pool name, agent name, and other options like whether to run the agent as a service.
+
+6. **Start Agent**: Once the configuration is complete, start the agent using the provided command. This command might be something like `./svc.sh install` (Linux/macOS) or `.\svc.cmd install` (Windows) if you chose to run the agent as a service.
+
+7. **Verify Agent Connectivity**: Go back to your Azure DevOps organization or Azure DevOps Server, navigate to the agent pool or queue where you configured the agent, and verify that the agent shows up as online and available.
+
+8. **Optional: Configure Additional Settings**: Depending on your requirements, you may need to configure additional settings such as proxy configuration, environment variables, or agent capabilities.
+
+9. **Monitor and Maintain**: Regularly monitor the status of your self-hosted agent to ensure it's healthy and performing as expected. Update the agent when new versions are released to take advantage of bug fixes and new features.
+
+That's a basic overview of how to configure a self-hosted agent. Each step may have variations depending on your specific environment and requirements.
